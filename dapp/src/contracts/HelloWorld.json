@@ -1,0 +1,511 @@
+{
+  "contractName": "HelloWorld",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "_message",
+          "type": "string"
+        }
+      ],
+      "name": "HelloWorld",
+      "type": "event"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "hello",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"_message\",\"type\":\"string\"}],\"name\":\"HelloWorld\",\"type\":\"event\"},{\"constant\":false,\"inputs\":[],\"name\":\"hello\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/dapp/contracts/Hello.sol\":\"HelloWorld\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/dapp/contracts/Hello.sol\":{\"keccak256\":\"0x3622177e7e92e32a9659fb7ba3c48c330397b65f542ccf4b984e12c66ec1f20b\",\"urls\":[\"bzz-raw://612af575eca80f8aadccd48a07225b1865b9c481b625a10b9ea46b507cf5e6a6\",\"dweb:/ipfs/QmTAgAkuHG5t6wMJk29MG2UAiYoqsJuvKmBDRQSDrud2ym\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5061018d806100206000396000f3fe608060405234801561001057600080fd5b506004361061002b5760003560e01c806319ff1d2114610030575b600080fd5b6100386100b3565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561007857808201518184015260208101905061005d565b50505050905090810190601f1680156100a55780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b60607f86066750c0fd4457fd16f79750914fbd72db952f2ff0a7b5c6a2a531bc15ce2c6040518080602001828103825260138152602001807f48656c6c6f20686173206265656e20736169640000000000000000000000000081525060200191505060405180910390a16040518060400160405280601281526020017f48656c6c6f2044617070333020576f726c64000000000000000000000000000081525090509056fea265627a7a723158203588438a82c683405d1a43ed99dfdb7ddf550bc63a0bd7f1a93596bc5b154deb64736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061002b5760003560e01c806319ff1d2114610030575b600080fd5b6100386100b3565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561007857808201518184015260208101905061005d565b50505050905090810190601f1680156100a55780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b60607f86066750c0fd4457fd16f79750914fbd72db952f2ff0a7b5c6a2a531bc15ce2c6040518080602001828103825260138152602001807f48656c6c6f20686173206265656e20736169640000000000000000000000000081525060200191505060405180910390a16040518060400160405280601281526020017f48656c6c6f2044617070333020576f726c64000000000000000000000000000081525090509056fea265627a7a723158203588438a82c683405d1a43ed99dfdb7ddf550bc63a0bd7f1a93596bc5b154deb64736f6c63430005100032",
+  "sourceMap": "34:207:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;34:207:0;;;;;;;",
+  "deployedSourceMap": "34:207:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;34:207:0;;;;;;;;;;;;;;;;;;;100:139;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;100:139:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;133:13;162:33;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;205:27;;;;;;;;;;;;;;;;;;;100:139;:::o",
+  "source": "pragma solidity >=0.4.21 <0.7.0;\n\ncontract HelloWorld {\n    event HelloWorld(string _message);\n\n    function hello() public returns (string memory){\n        emit HelloWorld(\"Hello has been said\");\n        return 'Hello Dapp30 World';\n    }\n}\n\n",
+  "sourcePath": "/home/dapp/contracts/Hello.sol",
+  "ast": {
+    "absolutePath": "/home/dapp/contracts/Hello.sol",
+    "exportedSymbols": {
+      "HelloWorld": [
+        18
+      ]
+    },
+    "id": 19,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".21",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 18,
+        "linearizedBaseContracts": [
+          18
+        ],
+        "name": "HelloWorld",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 5,
+            "name": "HelloWorld",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 4,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3,
+                  "indexed": false,
+                  "name": "_message",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5,
+                  "src": "77:15:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 2,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "77:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "76:17:0"
+            },
+            "src": "60:34:0"
+          },
+          {
+            "body": {
+              "id": 16,
+              "nodeType": "Block",
+              "src": "147:92:0",
+              "statements": [
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "48656c6c6f20686173206265656e2073616964",
+                        "id": 11,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "173:21:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_5c7bc2f8e9aaae597fd65c4cba48a644ecdfe68122fdb2ff88ecb4d0fb0ba8fc",
+                          "typeString": "literal_string \"Hello has been said\""
+                        },
+                        "value": "Hello has been said"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_5c7bc2f8e9aaae597fd65c4cba48a644ecdfe68122fdb2ff88ecb4d0fb0ba8fc",
+                          "typeString": "literal_string \"Hello has been said\""
+                        }
+                      ],
+                      "id": 10,
+                      "name": "HelloWorld",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 5,
+                      "src": "162:10:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (string memory)"
+                      }
+                    },
+                    "id": 12,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "162:33:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 13,
+                  "nodeType": "EmitStatement",
+                  "src": "157:38:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "48656c6c6f2044617070333020576f726c64",
+                    "id": 14,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "string",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "212:20:0",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_stringliteral_8d2470f762b05f1debf46624da66e1d8eb467342b7d564eb92f8d8c3aeefd9af",
+                      "typeString": "literal_string \"Hello Dapp30 World\""
+                    },
+                    "value": "Hello Dapp30 World"
+                  },
+                  "functionReturnParameters": 9,
+                  "id": 15,
+                  "nodeType": "Return",
+                  "src": "205:27:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 17,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "hello",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "114:2:0"
+            },
+            "returnParameters": {
+              "id": 9,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 8,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 17,
+                  "src": "133:13:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 7,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "133:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "132:15:0"
+            },
+            "scope": 18,
+            "src": "100:139:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 19,
+        "src": "34:207:0"
+      }
+    ],
+    "src": "0:243:0"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/dapp/contracts/Hello.sol",
+    "exportedSymbols": {
+      "HelloWorld": [
+        18
+      ]
+    },
+    "id": 19,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".21",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 18,
+        "linearizedBaseContracts": [
+          18
+        ],
+        "name": "HelloWorld",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 5,
+            "name": "HelloWorld",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 4,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3,
+                  "indexed": false,
+                  "name": "_message",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5,
+                  "src": "77:15:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 2,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "77:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "76:17:0"
+            },
+            "src": "60:34:0"
+          },
+          {
+            "body": {
+              "id": 16,
+              "nodeType": "Block",
+              "src": "147:92:0",
+              "statements": [
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "48656c6c6f20686173206265656e2073616964",
+                        "id": 11,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "173:21:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_5c7bc2f8e9aaae597fd65c4cba48a644ecdfe68122fdb2ff88ecb4d0fb0ba8fc",
+                          "typeString": "literal_string \"Hello has been said\""
+                        },
+                        "value": "Hello has been said"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_5c7bc2f8e9aaae597fd65c4cba48a644ecdfe68122fdb2ff88ecb4d0fb0ba8fc",
+                          "typeString": "literal_string \"Hello has been said\""
+                        }
+                      ],
+                      "id": 10,
+                      "name": "HelloWorld",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 5,
+                      "src": "162:10:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (string memory)"
+                      }
+                    },
+                    "id": 12,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "162:33:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 13,
+                  "nodeType": "EmitStatement",
+                  "src": "157:38:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "48656c6c6f2044617070333020576f726c64",
+                    "id": 14,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "string",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "212:20:0",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_stringliteral_8d2470f762b05f1debf46624da66e1d8eb467342b7d564eb92f8d8c3aeefd9af",
+                      "typeString": "literal_string \"Hello Dapp30 World\""
+                    },
+                    "value": "Hello Dapp30 World"
+                  },
+                  "functionReturnParameters": 9,
+                  "id": 15,
+                  "nodeType": "Return",
+                  "src": "205:27:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 17,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "hello",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "114:2:0"
+            },
+            "returnParameters": {
+              "id": 9,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 8,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 17,
+                  "src": "133:13:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 7,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "133:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "132:15:0"
+            },
+            "scope": 18,
+            "src": "100:139:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 19,
+        "src": "34:207:0"
+      }
+    ],
+    "src": "0:243:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.1.0",
+  "updatedAt": "2020-05-15T22:26:59.412Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
