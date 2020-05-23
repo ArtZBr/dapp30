@@ -1,9 +1,7 @@
 const HDWalletProvider = require('@truffle/hdwallet-provider');
-const infuraKey = "fj4jll3k.....";
 
 const path = require('path')
-const fs = require('fs');
-
+const secrets = require('./.secrets.json');
 const contracts = path.join(__dirname, "./src/contracts");
 
 module.exports = {
@@ -13,10 +11,24 @@ module.exports = {
             host: "0.0.0.0",
             port: 8545,
             network_id: "*",
+            accounts: 10,
+            websockets: true
         },
-
+        rinkeby: {
+            provider: () => new HDWalletProvider(
+                secrets.mnemonic, 
+                `wss://rinkeby.infura.io/ws/v3/${secrets.infuraKey}`,
+                0,
+                1
+            ),
+            network_id: 4,
+            from: "0x55466Fc7CD33E6791d7E2246fE7496783cc6ED4f", 
+            gas: 5500000,
+            confirmations: 2,
+            timeoutBlocks: 200,
+            skipDryRun: true
+        }
     },
-
     mocha: {
         // timeout: 100000
     },

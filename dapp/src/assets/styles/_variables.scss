@@ -1,0 +1,17 @@
+$primary: rgba(241, 89, 43, 1);
+$secondary: rgba(97, 98, 98, 1);
+$info: rgba(77, 97, 132, 1);
+$success : rgba(52, 103, 52, 1);
+$warning : rgba(215, 163, 41, 1);
+$danger: rgba(133, 32, 30, 1);
+
+$theme-colors: (
+"primary": $primary,
+"secondary": $secondary,
+"info": $info,
+"success": $success,
+"warning": $warning,
+"danger": $danger
+);
+
+@import "bootstrap/scss/bootstrap.scss";
