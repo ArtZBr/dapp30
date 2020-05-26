@@ -1,7 +1,7 @@
 import React from 'react';
 import { Jumbotron, Row, Col} from 'react-bootstrap'
 
-import Cards from './Cards.js';
+import Day5 from './Day05.js';
 import './Dapp30.scss';
 
 //console.log(drizzleStore);
@@ -24,7 +24,12 @@ const Dapp30 = () => {
         </Col>
         </Row>
         </Jumbotron>
-        <Cards />
+        <h1>Day 1 - 5</h1>
+        <Day5 />
+        <hr />
+        <h1>Day 6 - 10</h1>
+        <Day5 />
+        <hr />
         </>
     )
 }

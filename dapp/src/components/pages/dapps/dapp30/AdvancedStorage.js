@@ -45,7 +45,7 @@ const AdvancedStorage = () => {
 
         <hr />
 
-        <small className="text-muted"><a href="https://github.com/facebook/react/issues/15074">*React Sends Value Twice</a></small>
+        <small className="text-muted"><a href="https://github.com/facebook/react/issues/15074">*React sends value twice in a development environment.</a></small>
 
         <hr />
 
