@@ -7,7 +7,7 @@ stdenv.mkDerivation {
 
   buildInputs = [python37 nodejs-12_x git];
   shellHook = ''
-    npm i drizzle
+    npm i truffle ganache-cli serve create-react-app firebase-tools
   '';
 }
 
