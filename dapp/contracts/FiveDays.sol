@@ -52,3 +52,74 @@ contract AdvancedStorage {
         return ids.length;
     }
 }
+
+/* Crud Smart Contract *********************************************************/
+contract Crud {
+
+    /* DATA VARIABLES ******************************************************************/
+    struct User {
+        uint id;
+        string name;
+    }
+    User[] public users;
+    uint public nextId = 1;
+
+    /* EVENT DEFINITIONS ***************************************************************/
+    event CreateUser(string name, uint id, string _message);
+    event UpdateUser(string name, string _message);
+    event DeleteUser(string name, string _message);
+
+    /* FUNCTION MODIFIERS **************************************************************/
+
+    /* CONSTRUCTOR *********************************************************************/
+    constructor() public {
+        users.push(User(nextId, 'Admin'));
+        nextId++;
+    }
+
+    /* UTILITY FUNCTIONS ***************************************************************/
+    function find(uint _id) view internal returns(uint){
+        for(uint i = 0; i < users.length; i++) {
+            if(users[i].id == _id) {
+                return i;
+            }
+        }
+        revert('User does not exist!');
+    }
+
+    /* SMART CONTRACT FUNCTIONS ********************************************************/
+    function create(string memory _name) public {
+        users.push(User(nextId, _name));
+        emit CreateUser(_name, nextId, "User has been created.");
+        nextId++;
+    }
+
+    function read(uint _id) view public returns(uint, string memory) {
+        uint i = find(_id);
+        return(users[i].id, users[i].name);
+    }
+
+    function update(uint _id, string memory _name) public {
+        uint i = find(_id);
+        users[i].name = _name;
+        emit UpdateUser(users[i].name, "User has been updated.");
+    }
+
+    function destroy(uint _id) public {
+        uint i = find(_id);
+        delete users[i];
+        emit DeleteUser(users[i].name, "User has been deleted.");
+        users.push(User(_id, 'BLANK'));
+    }
+
+    /** DATA CONTRACT INTERFACE ************************************************************/
+}
+
+/* FlightSurety Smart Contract *********************************************************/
+/* DATA VARIABLES ******************************************************************/
+/* EVENT DEFINITIONS ***************************************************************/
+/* FUNCTION MODIFIERS **************************************************************/
+/* CONSTRUCTOR *********************************************************************/
+/* UTILITY FUNCTIONS ***************************************************************/
+/* SMART CONTRACT FUNCTIONS ********************************************************/
+/** DATA CONTRACT INTERFACE ************************************************************/

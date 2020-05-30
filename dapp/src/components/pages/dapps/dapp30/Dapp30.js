@@ -2,6 +2,7 @@ import React from 'react';
 import { Jumbotron, Row, Col} from 'react-bootstrap'
 
 import Day5 from './Day05.js';
+//import Day10 from './Day10.js';
 import './Dapp30.scss';
 
 //console.log(drizzleStore);
@@ -21,6 +22,9 @@ const Dapp30 = () => {
         <p>
         <a href="https://eattheblocks.com/" target="_blank" rel="noopener noreferrer" className="btn btn-primary">Learn More</a>
         </p>
+        <a href="#update-anchor" target="_self" rel="noopener noreferrer" className="btn btn-primary">Current</a>
+        <p>
+        </p>
         </Col>
         </Row>
         </Jumbotron>
@@ -28,7 +32,6 @@ const Dapp30 = () => {
         <Day5 />
         <hr />
         <h1>Day 6 - 10</h1>
-        <Day5 />
         <hr />
         </>
     )

@@ -27,7 +27,7 @@ const AdvancedStorage = () => {
             }
         }>
 
-        <Form.Group controlId="advacedStorageData">
+        <Form.Group>
         <Form.Label>Enter an <i><b>integer</b></i> ID:</Form.Label>
         <Form.Control
         type="text"
@@ -77,7 +77,7 @@ const AdvancedStorage = () => {
 
         <Form>
 
-        <Form.Group controlId="advacedStorageData">
+        <Form.Group>
         <Form.Label>Get <b>ID</b> by <b>Index</b>: 0 - {idsLength}</Form.Label>
         <Form.Control
         type="number"

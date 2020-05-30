@@ -3,16 +3,16 @@ import { CardColumns, Card, Badge } from 'react-bootstrap';
 
 import { drizzleReactHooks } from '@drizzle/react-plugin';
 
-import Hello from './HelloWorld.js';
-import SimpleStorage from './SimpleStorage.js';
-import AdvancedStorage from './AdvancedStorage.js';
+import Hello from './days/HelloWorld.js';
+import SimpleStorage from './days/SimpleStorage.js';
+import AdvancedStorage from './days/AdvancedStorage.js';
+import Crud from './days/Crud.js';
 
 
 const Day5 = () => {
     const { drizzle } = drizzleReactHooks.useDrizzle()
     const state = drizzle.store.getState();
     const account = state.accounts[0];
-    console.log(state.accountBalances[account]);
     return (
         <CardColumns>
 
@@ -108,12 +108,8 @@ const Day5 = () => {
         <Card>
         <Card.Img src="https://picsum.photos/id/25/200/100" />
         <Card.Body>
-        <Card.Title>Day 5</Card.Title>
-        <Card.Text>
-        This is a wider card with supporting text below as a natural lead-in to
-        additional content. This card has even longer content than the first to
-        show that equal height action.
-        </Card.Text>
+        <Card.Title>Day 5 - CRUD</Card.Title>
+        <Crud />
         </Card.Body>
         </Card>
 

@@ -3,12 +3,13 @@ import { CardColumns, Card, Badge } from 'react-bootstrap';
 
 import { drizzleReactHooks } from '@drizzle/react-plugin';
 
-import Hello from './HelloWorld.js';
-import SimpleStorage from './SimpleStorage.js';
-import AdvancedStorage from './AdvancedStorage.js';
+import Hello from './days/HelloWorld.js';
+import SimpleStorage from './days/SimpleStorage.js';
+import AdvancedStorage from './days/AdvancedStorage.js';
+import Crud from './days/Crud.js';
 
 
-const Cards = () => {
+const Day10 = () => {
     const { drizzle } = drizzleReactHooks.useDrizzle()
     const state = drizzle.store.getState();
     const account = state.accounts[0];
@@ -121,4 +122,4 @@ const Cards = () => {
     )
 }
 
-export default Cards
+export default Day10;
